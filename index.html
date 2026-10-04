@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#12091f" />
+  <title>Para Joseline · Dos Almas, Mil Universos</title>
+  <style>
+    :root{
+      --bg:#0c0715; --panel:#171025; --panel2:#211333; --ink:#fff9f6;
+      --muted:#cdbfd4; --gold:#e5b969; --rose:#f08ca3; --lav:#b69cff;
+      --line:rgba(255,255,255,.10); --shadow:0 24px 80px rgba(0,0,0,.42);
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(circle at 20% 10%,#2a1643 0,#12091f 35%,#090611 75%);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;background:
+      radial-gradient(circle at 80% 5%,rgba(240,140,163,.11),transparent 28%),
+      radial-gradient(circle at 50% 95%,rgba(182,156,255,.10),transparent 36%);z-index:-2}
+    .stars{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden}.star{position:absolute;width:2px;height:2px;background:white;border-radius:50%;opacity:.6;animation:twinkle 3s infinite ease-in-out}.star.gold{background:var(--gold)}
+    @keyframes twinkle{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.45)}}
+    .shell{width:min(1180px,calc(100% - 28px));margin:auto}
+    header{position:sticky;top:0;z-index:30;backdrop-filter:blur(18px);background:linear-gradient(180deg,rgba(9,6,17,.88),rgba(9,6,17,.55));border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;gap:18px;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px;white-space:nowrap}.brand-mark{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(229,185,105,.55);box-shadow:inset 0 0 28px rgba(229,185,105,.08)}
+    nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.tab-btn{border:0;background:transparent;color:var(--muted);padding:11px 14px;border-radius:999px;cursor:pointer;font-weight:700;transition:.25s}.tab-btn:hover,.tab-btn.active{color:white;background:rgba(255,255,255,.08)}.tab-btn.active{box-shadow:inset 0 0 0 1px rgba(229,185,105,.24)}
+    main{padding:38px 0 72px}.tab{display:none;animation:fade .4s ease}.tab.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+    .hero{min-height:72vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:42px;padding:34px 0}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(229,185,105,.22);padding:8px 12px;border-radius:999px;color:#f3d7a6;background:rgba(229,185,105,.06);font-size:.9rem;font-weight:800;letter-spacing:.4px}.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(3.2rem,7vw,7rem);line-height:.92;margin:22px 0 18px;letter-spacing:-3px}.hero h1 span{display:block;color:var(--rose);font-style:italic;font-weight:500}.lead{font-size:clamp(1.03rem,2vw,1.24rem);line-height:1.7;color:var(--muted);max-width:730px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{border:0;border-radius:999px;padding:14px 18px;font-weight:900;cursor:pointer;transition:.25s;display:inline-flex;align-items:center;gap:9px;text-decoration:none}.btn-primary{background:linear-gradient(135deg,var(--rose),#b968ce);color:#170d1d;box-shadow:0 12px 35px rgba(240,140,163,.25)}.btn-secondary{background:rgba(255,255,255,.07);color:white;border:1px solid var(--line)}.btn:hover{transform:translateY(-2px)}
+    .orbit-card{position:relative;aspect-ratio:.82;border-radius:38px;background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid var(--line);overflow:hidden;box-shadow:var(--shadow)}.orbit-card:before{content:"";position:absolute;inset:9%;border:1px solid rgba(229,185,105,.4);border-radius:50%;transform:rotate(-22deg)}.orbit-card:after{content:"";position:absolute;inset:20% 5%;border:1px solid rgba(240,140,163,.35);border-radius:50%;transform:rotate(27deg)}.planet{position:absolute;border-radius:50%;box-shadow:0 0 40px currentColor}.p1{width:80px;height:80px;background:radial-gradient(circle at 30% 25%,#ffd6c8,#ae597e 58%,#381a49);top:16%;right:14%}.p2{width:42px;height:42px;background:radial-gradient(circle at 30% 25%,#fff1af,#c4814c 60%,#603248);bottom:20%;left:14%}.center-love{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:54px;z-index:3}.center-love .bigheart{font-size:88px;filter:drop-shadow(0 8px 20px rgba(240,140,163,.5));animation:pulse 2.4s infinite ease-in-out}@keyframes pulse{50%{transform:scale(1.08)}}.center-love p{font-family:Georgia,serif;font-style:italic;color:#f6d9df;font-size:1.1rem;line-height:1.55;margin:10px 0 0}.mini-badge{position:absolute;bottom:18px;left:18px;right:18px;padding:14px 16px;border-radius:18px;background:rgba(10,7,17,.62);backdrop-filter:blur(12px);border:1px solid var(--line);color:var(--muted);font-size:.9rem;z-index:4}.mini-badge b{color:white}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:16px 0 24px}.section-head h2{font-family:Georgia,serif;font-size:clamp(2.2rem,5vw,4.5rem);line-height:1;margin:0}.section-head p{color:var(--muted);max-width:600px;line-height:1.6;margin:0}.panel{background:linear-gradient(150deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .joke-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}.joke-stage{padding:28px;min-height:420px;display:flex;flex-direction:column;justify-content:space-between}.joke-icon{font-size:64px}.joke-text{font-family:Georgia,serif;font-size:clamp(1.55rem,3vw,2.6rem);line-height:1.22;margin:22px 0;color:#fff}.joke-foot{color:var(--muted);font-size:.95rem}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.chip{border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--muted);padding:9px 11px;border-radius:999px;cursor:pointer;font-weight:800}.chip.active,.chip:hover{color:white;border-color:rgba(240,140,163,.45);background:rgba(240,140,163,.08)}.joke-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.small-card{padding:18px;border-radius:20px;background:rgba(255,255,255,.045);border:1px solid var(--line);min-height:124px;display:flex;flex-direction:column;justify-content:space-between}.small-card b{font-family:Georgia,serif;font-size:1.05rem;line-height:1.35}.small-card span{font-size:.82rem;color:var(--muted);margin-top:14px}
+    .motivation{display:grid;grid-template-columns:280px 1fr;gap:18px}.days{padding:16px;display:grid;gap:8px;height:max-content}.day{border:1px solid transparent;background:transparent;color:var(--muted);text-align:left;border-radius:16px;padding:13px 14px;font-weight:900;cursor:pointer;display:flex;justify-content:space-between}.day:hover,.day.active{background:rgba(255,255,255,.06);color:white;border-color:var(--line)}.day.active span{color:var(--gold)}.phrase-wrap{padding:30px;min-height:550px;display:flex;flex-direction:column}.day-title{display:flex;justify-content:space-between;gap:14px;align-items:center}.day-title h3{font-family:Georgia,serif;font-size:2.3rem;margin:0}.counter{color:var(--muted);font-weight:800}.daily-main{margin:34px 0 22px;padding:26px;border-radius:22px;background:linear-gradient(135deg,rgba(240,140,163,.12),rgba(182,156,255,.08));border:1px solid rgba(240,140,163,.18)}.daily-main q{font-family:Georgia,serif;font-size:clamp(1.45rem,3vw,2.3rem);line-height:1.35}.daily-main footer{color:var(--gold);margin-top:16px;font-weight:900}.phrase-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-height:290px;overflow:auto;padding-right:4px}.phrase{padding:14px 15px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line);color:#eadfea;line-height:1.45;cursor:pointer}.phrase:hover{background:rgba(255,255,255,.07)}
+    .book-grid{display:grid;grid-template-columns:360px 1fr;gap:20px}.book-cover{overflow:hidden;padding:12px}.book-cover img{width:100%;display:block;border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.35)}.book-meta{padding:18px 8px 6px}.book-meta h3{font-family:Georgia,serif;font-size:2rem;margin:0 0 8px}.book-meta p{color:var(--muted);line-height:1.6}.viewer{padding:12px;min-height:78vh}.viewer iframe,.viewer object{width:100%;height:78vh;border:0;border-radius:18px;background:#fff}.viewer-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:2px 4px 12px}.viewer-head small{color:var(--muted)}
+    .love-strip{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.love-stat{padding:18px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line)}.love-stat b{display:block;font-size:1.5rem;color:var(--gold);font-family:Georgia,serif}.love-stat span{color:var(--muted);font-size:.9rem}
+    .modal{position:fixed;inset:0;background:rgba(5,3,9,.72);display:none;align-items:center;justify-content:center;padding:20px;z-index:100}.modal.show{display:flex}.modal-card{width:min(620px,100%);padding:32px;border-radius:30px;background:linear-gradient(160deg,#241332,#130c20);border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow);text-align:center;position:relative}.modal-card h3{font-family:Georgia,serif;font-size:2.5rem;margin:10px 0}.modal-card p{color:var(--muted);line-height:1.7}.close{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.06);color:white;cursor:pointer}.confetti{position:fixed;pointer-events:none;z-index:120;font-size:20px;animation:fall 2.6s linear forwards}@keyframes fall{from{transform:translateY(-10vh) rotate(0);opacity:1}to{transform:translateY(110vh) rotate(540deg);opacity:0}}
+    footer.site{padding:32px 0 55px;color:var(--muted);text-align:center}.tiny{font-size:.85rem;color:var(--muted)}
+    @media(max-width:900px){.hero,.joke-layout,.motivation,.book-grid{grid-template-columns:1fr}.hero{padding-top:10px}.orbit-card{max-height:560px}.days{grid-template-columns:repeat(2,1fr)}.viewer iframe,.viewer object{height:68vh}.nav{height:auto;padding:12px 0;align-items:flex-start}.brand{padding-top:8px}.section-head{align-items:flex-start;flex-direction:column}.love-strip{grid-template-columns:1fr}.joke-grid,.phrase-list{grid-template-columns:1fr}.book-cover{max-width:440px;margin:auto}}
+    @media(max-width:620px){.shell{width:min(100% - 18px,1180px)}.brand span:last-child{display:none}.tab-btn{padding:9px 10px;font-size:.82rem}.nav{gap:6px}.hero h1{letter-spacing:-2px}.hero{min-height:auto}.center-love{padding:28px}.days{grid-template-columns:1fr 1fr}.phrase-wrap{padding:20px}.viewer{padding:7px}.viewer iframe,.viewer object{height:62vh}}
+  </style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<header>
+  <div class="shell nav">
+    <div class="brand"><div class="brand-mark">✦</div><span>Dos Almas</span><span style="color:var(--rose)">Mil Universos</span></div>
+    <nav aria-label="Secciones">
+      <button class="tab-btn active" data-tab="inicio">Inicio</button>
+      <button class="tab-btn" data-tab="guardia">Humor de guardia</button>
+      <button class="tab-btn" data-tab="dias">7 días para admirarte</button>
+      <button class="tab-btn" data-tab="libro">Nuestro libro</button>
+    </nav>
+  </div>
+</header>
+<main class="shell">
+  <section class="tab active" id="inicio">
+    <div class="hero">
+      <div>
+        <div class="eyebrow">✦ Un sitio hecho solo para ti</div>
+        <h1>Para mi <span>Joseline</span></h1>
+        <p class="lead">Hay cosas que no caben en un mensaje, ni en una llamada, ni siquiera en un libro. Por eso hice este pequeño universo: para recordarte cuánto te amo, cuánto admiro a la mujer en la que te has convertido y cuánto me encanta seguir viviendo esta historia contigo.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="goTab('libro')">📖 Abrir nuestro libro</button>
+          <button class="btn btn-secondary" onclick="openSurprise()">💌 Tengo algo que decirte</button>
+        </div>
+        <div class="love-strip">
+          <div class="love-stat"><b>10 años ≈ ∞</b><span>Porque contigo el tiempo se mide distinto.</span></div>
+          <div class="love-stat"><b>3 adioses</b><span>Y muchísimos reencuentros que valieron la pena.</span></div>
+          <div class="love-stat"><b>1 elección</b><span>Seguir eligiéndote. Universo a universo.</span></div>
+        </div>
+      </div>
+      <div class="orbit-card" aria-label="Universo romántico">
+        <div class="planet p1"></div><div class="planet p2"></div>
+        <div class="center-love"><div><div class="bigheart">♥</div><p>“No necesito saber en qué universo estamos.<br>Si estás tú, ya sé dónde quiero quedarme.”</p></div></div>
+        <div class="mini-badge"><b>Para la doctora más valiente de mi universo:</b> esta página tiene ciencia, bromas, guardias, amor y un libro entero donde siempre terminas siendo tú.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tab" id="guardia">
+    <div class="section-head"><div><div class="eyebrow">🩺 Humor autorizado por el comité del amor</div><h2>Humor de guardia</h2></div><p>Una sección para reírte entre pacientes, notas, pases de visita, fetocardia, cérvix que “todavía no coopera” y ese misterioso fenómeno llamado “ya casi salgo”.</p></div>
+    <div class="joke-layout">
+      <div class="panel joke-stage">
+        <div><div class="joke-icon" id="jokeIcon">🩺</div><div class="chips" id="chips"></div><div class="joke-text" id="jokeText"></div><div class="joke-foot" id="jokeFoot"></div></div>
+        <button class="btn btn-primary" onclick="nextJoke()">Otra dosis de humor ✨</button>
+      </div>
+      <div class="panel" style="padding:18px"><div class="joke-grid" id="jokeGrid"></div></div>
+    </div>
+  </section>
+
+  <section class="tab" id="dias">
+    <div class="section-head"><div><div class="eyebrow">🌙 Una dosis diaria de “mira todo lo que eres”</div><h2>7 días para admirarte</h2></div><p>Porque no solo quiero decirte que te amo. Quiero recordarte, todos los días, por qué te admiro tanto: como mujer, como médica, como compañera y como la persona con la que quiero seguir construyendo.</p></div>
+    <div class="motivation">
+      <div class="panel days" id="days"></div>
+      <div class="panel phrase-wrap">
+        <div class="day-title"><h3 id="dayTitle">Lunes</h3><div class="counter" id="counter"></div></div>
+        <div class="daily-main"><q id="mainPhrase"></q><footer>— Freddy, tu neguits</footer></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px"><button class="btn btn-primary" onclick="nextPhrase()">Dame otra frase 💗</button><button class="btn btn-secondary" onclick="randomAnyDay()">Sorpréndeme ✨</button></div>
+        <div class="phrase-list" id="phraseList"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tab" id="libro">
+    <div class="section-head"><div><div class="eyebrow">📚 Nuestro universo escrito</div><h2>Dos Almas, Mil Universos</h2></div><p>Aquí está el libro completo, integrado dentro de la página. Puedes leerlo sin salir del sitio o abrirlo aparte cuando quieras verlo en pantalla completa.</p></div>
+    <div class="book-grid">
+      <aside class="panel book-cover">
+        <img src="portada.png" alt="Portada de Dos Almas, Mil Universos">
+        <div class="book-meta"><h3>Dos Almas, Mil Universos</h3><p>Una historia de amor escrita universo a universo. Para Joseline Ayala, la mujer por quien vale la pena existir en cada mundo posible.</p><a class="btn btn-primary" href="libro.pdf" target="_blank" rel="noopener">Abrir libro completo ↗</a></div>
+      </aside>
+      <div class="panel viewer">
+        <div class="viewer-head"><div><b>Lectura integrada</b><br><small>Desliza dentro del visor para cambiar de página.</small></div><span class="tiny">PDF · edición ilustrada</span></div>
+        <object data="libro.pdf#view=FitH" type="application/pdf">
+          <iframe src="libro.pdf#view=FitH" title="Dos Almas, Mil Universos"></iframe>
+          <p>Tu navegador no puede mostrar el PDF aquí. <a href="libro.pdf" target="_blank">Ábrelo en una nueva pestaña.</a></p>
+        </object>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site shell">Hecho con amor, café, distancia superada y una cantidad poco científica de “te amo”. ♥</footer>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeSurprise()"><div class="modal-card"><button class="close" onclick="closeSurprise()">×</button><div style="font-size:52px">💗</div><h3>Siempre serías tú.</h3><p>En el universo donde nos conocimos, en el que nos tocó despedirnos, en el que vivimos lejos, en el que nos reencontramos, en el que tú sigues luchando por tus sueños y en todos los que todavía faltan por existir.</p><p style="color:#fff;font-family:Georgia,serif;font-size:1.25rem">Te admiro muchísimo. Y te amo más de lo que sé escribir.</p></div></div>
+<script>
+  // Estrellas
+  const stars=document.getElementById('stars');
+  for(let i=0;i<120;i++){const s=document.createElement('i');s.className='star'+(i%5===0?' gold':'');s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=(Math.random()*3)+'s';s.style.animationDuration=(2+Math.random()*4)+'s';stars.appendChild(s)}
+
+  // Navegación
+  const tabs=[...document.querySelectorAll('.tab')], buttons=[...document.querySelectorAll('.tab-btn')];
+  function goTab(id){tabs.forEach(t=>t.classList.toggle('active',t.id===id));buttons.forEach(b=>b.classList.toggle('active',b.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'})}
+  buttons.forEach(b=>b.onclick=()=>goTab(b.dataset.tab));
+
+  // Bromas
+  const jokes=[
+    {c:'guardia',i:'🌙',t:'“Ya casi salgo” en una guardia es una unidad de tiempo. Aproximadamente entre 5 minutos y 4 horas.',f:'Cronometría obstétrica no oficial.'},
+    {c:'guardia',i:'☕',t:'El café no aparece en las guías clínicas, pero claramente tiene grado de recomendación A durante la guardia.',f:'Nivel de evidencia: todos los residentes.'},
+    {c:'guardia',i:'🩺',t:'Signos vitales del R1: TA normal, FC 98, saturación 99… y batería del celular 3%.',f:'Paciente estable. Residente en observación.'},
+    {c:'parto',i:'👶',t:'El bebé: “voy a nacer”. El cérvix: “eso lo veremos”.',f:'Plot twist obstétrico clásico.'},
+    {c:'parto',i:'⏱️',t:'Cuando dicen “es primigesta, todavía falta” y el universo decide practicar una expulsión express.',f:'Obstetricia: cero respeto por tus planes.'},
+    {c:'parto',i:'📈',t:'Una FCF tranquilita en el monitor es básicamente música relajante para gineco-obstetras.',f:'ASMR versión sala de labor.'},
+    {c:'consulta',i:'🧠',t:'Paciente: “solo vengo a una preguntita”. La preguntita: antecedentes desde 1998, tres ultrasonidos y una carpeta de laboratorios.',f:'Consulta breve, capítulo 1 de 14.'},
+    {c:'consulta',i:'📝',t:'Historia clínica completa: 20 minutos. Encontrar el bolígrafo que traías en la mano: 7 minutos.',f:'Misterios de la medicina.'},
+    {c:'residencia',i:'📚',t:'R1 estudiando: “hoy sí me duermo temprano”. PubMed: “te recomiendo 17 artículos más”.',f:'El algoritmo también hace guardias.'},
+    {c:'residencia',i:'🥱',t:'El verdadero diagnóstico diferencial del residente: hambre, sueño o hambre con sueño.',f:'Manejo: comida y 6 horas de descanso. Algún día.'},
+    {c:'residencia',i:'💪',t:'Ser residente es aprender medicina mientras descubres habilidades ocultas: comer en 4 minutos y dormir sentado.',f:'Competencias transversales no acreditadas.'},
+    {c:'residencia',i:'🏥',t:'“Solo será una semana pesada”. —La residencia, todas las semanas.',f:'Declaración históricamente optimista.'},
+    {c:'gine',i:'🔬',t:'Ginecología: donde “es solo un control” puede convertirse muy rápido en “vamos a revisar esto con calma”.',f:'Porque el contexto lo es todo.'},
+    {c:'gine',i:'🧬',t:'El ciclo menstrual tiene fases. La residencia también: café, trabajo, sueño y repetir.',f:'Ciclo de 24 horas, bastante irregular.'},
+    {c:'gine',i:'🩻',t:'Ultrasonido bonito + paciente tranquila + tiempo para comer = alineación planetaria de alta rareza.',f:'Fenómeno digno de reporte de caso.'},
+    {c:'amor',i:'💗',t:'Diagnóstico: estoy enamorado de una gineco-obstetra. Pronóstico: crónico. Tratamiento: verla sonreír.',f:'Sin intención de alta médica.'},
+    {c:'amor',i:'🫶',t:'Yo no sé interpretar todos los monitoreos, pero sí sé que mi corazón hace taquicardia cuando llegas.',f:'Correlación clínica bastante evidente.'},
+    {c:'amor',i:'🌌',t:'Si el amor tuviera especialidad, el mío sería medicina materno-universal: te elige en todos los mundos.',f:'Subespecialidad inventada, sentimiento real.'},
+    {c:'guardia',i:'📟',t:'Guardia tranquila: expresión que no debe pronunciarse en voz alta bajo ninguna circunstancia.',f:'Regla ancestral hospitalaria.'},
+    {c:'parto',i:'🚪',t:'El cérvix a veces abre más lentamente que una página con internet del hospital.',f:'Pero eventualmente carga.'},
+    {c:'consulta',i:'🧾',t:'“No tomo ningún medicamento”. Cinco minutos después: “bueno, solo estos seis”.',f:'Anamnesis: la expansión del universo.'},
+    {c:'residencia',i:'🧃',t:'Comer a una hora normal durante la residencia debería contar como evento adverso inesperadamente positivo.',f:'Se recomienda notificarlo al servicio.'},
+    {c:'gine',i:'🗓️',t:'Calendario ginecológico: días fértiles, días no fértiles y días en que de todos modos hay guardia.',f:'La tercera categoría es la más constante.'},
+    {c:'amor',i:'✨',t:'Tú salvas guardias con conocimiento. A mí me salvas días enteros con una sola llamada.',f:'Evidencia observacional de diez años.'}
+  ];
+  const catNames={todos:'Todo',guardia:'Guardia',parto:'Parto',consulta:'Consulta',residencia:'Residencia',gine:'Gine',amor:'Amor'};
+  let cat='todos', jokeIndex=0;
+  function filtered(){return cat==='todos'?jokes:jokes.filter(j=>j.c===cat)}
+  function renderChips(){const el=document.getElementById('chips');el.innerHTML='';Object.keys(catNames).forEach(k=>{const b=document.createElement('button');b.className='chip'+(k===cat?' active':'');b.textContent=catNames[k];b.onclick=()=>{cat=k;jokeIndex=0;renderChips();renderJoke();renderGrid()};el.appendChild(b)})}
+  function renderJoke(){const a=filtered(),j=a[jokeIndex%a.length];document.getElementById('jokeIcon').textContent=j.i;document.getElementById('jokeText').textContent=j.t;document.getElementById('jokeFoot').textContent=j.f}
+  function nextJoke(){const a=filtered();jokeIndex=(jokeIndex+1)%a.length;renderJoke()}
+  function renderGrid(){const el=document.getElementById('jokeGrid');el.innerHTML='';filtered().slice(0,8).forEach((j,n)=>{const d=document.createElement('div');d.className='small-card';d.innerHTML=`<b>${j.i} ${j.t}</b><span>${j.f}</span>`;d.onclick=()=>{jokeIndex=n;renderJoke();window.scrollTo({top:0,behavior:'smooth'})};el.appendChild(d)})}
+  renderChips();renderJoke();renderGrid();
+
+  // Frases por día
+  const phrases={
+    Lunes:[
+      'Empieza la semana recordando esto: no tienes que demostrarle a nadie lo valiente que eres. Ya lo has demostrado cada vez que sigues adelante aunque estés cansada.',
+      'Admiro la disciplina con la que persigues tus sueños incluso cuando el camino te exige más de lo justo.',
+      'Tu bata dice doctora, pero lo que más admiro es todo lo que hubo antes de ponértela: estudio, sacrificio, dudas y volver a intentarlo.',
+      'No importa cuántas cosas tengas pendientes hoy: ya eres muchísimo más que una lista de tareas completadas.',
+      'Eres de esas personas que convierten el esfuerzo en futuro. Y me encanta poder mirar de cerca cómo lo haces.',
+      'Hoy quizá sea lunes para el mundo. Para mí es otro día para sentir orgullo de ti.',
+      'Cada paciente que atiendes conoce a una doctora; yo conozco además a la mujer increíble que hay detrás de esa doctora.',
+      'Tu cansancio no disminuye tu talento. Descansar también forma parte de llegar lejos.',
+      'A veces quizá no notes cuánto has avanzado porque sigues mirando la siguiente meta. Yo sí lo noto, y es enorme.',
+      'No necesitas tener un día perfecto para seguir siendo extraordinaria.',
+      'Si esta semana se pone difícil, recuerda que ya has superado semanas que parecían imposibles.',
+      'Estoy orgulloso no solo de lo que consigues, sino de la persona que sigues siendo mientras lo consigues.'
+    ],
+    Martes:[
+      'Me encanta tu capacidad de aprender algo difícil, volver al día siguiente y seguir aprendiendo todavía más.',
+      'Tienes una mezcla preciosa de inteligencia y corazón; en medicina eso vale más que cualquier nota.',
+      'Cuando dudas de ti, yo quisiera prestarte mis ojos un momento para que veas a la mujer que yo veo.',
+      'No todos los avances se sienten como victorias. Algunos son simplemente levantarse y volver a entrar al hospital.',
+      'Tu futuro no apareció por suerte: lo estás construyendo turno por turno, libro por libro y decisión por decisión.',
+      'Admiro que puedas cuidar a otros incluso en días en los que tú también necesitas que te cuiden.',
+      'No hay guardia que pueda borrar todo el talento que llevas contigo.',
+      'Tienes permiso de estar cansada y seguir siendo fuerte al mismo tiempo.',
+      'Que hoy algo no salga perfecto no cambia nada de todo lo que sabes ni de todo lo que eres.',
+      'Amo la forma en que haces espacio para tus sueños aun cuando el día parece no dejar espacio para nada.',
+      'Tu esfuerzo de hoy quizá nadie lo aplauda, pero yo lo veo y lo admiro muchísimo.',
+      'No estás corriendo una carrera contra nadie. Tu camino es tuyo, y ya es increíble.'
+    ],
+    Miércoles:[
+      'Mitad de semana: oficialmente un buen momento para recordarte que sigues siendo mi persona favorita del universo.',
+      'Hay días en que avanzar significa aprender una técnica nueva; otros, simplemente no rendirse. Los dos cuentan.',
+      'Me inspira verte convertir el miedo en preparación y la preparación en seguridad.',
+      'Tu sensibilidad no te hace menos fuerte; te hace una médica más humana y una mujer todavía más admirable.',
+      'Cada vez que eliges seguir estudiando a pesar del cansancio, estás construyendo la especialista que quieres ser.',
+      'No todo lo importante cabe en un expediente. Tu empatía tampoco, y sin embargo cambia la experiencia de tus pacientes.',
+      'Eres muchísimo más capaz de lo que tu peor día te permite creer.',
+      'Si hoy necesitas ir más despacio, ve despacio. Seguir avanzando no siempre significa correr.',
+      'Tu historia profesional apenas está empezando y ya tiene muchísimo de qué sentirse orgullosa.',
+      'El hospital puede llevarse horas de sueño, pero no puede llevarse la luz que tienes cuando haces algo que te importa.',
+      'Me haces admirar no solo la medicina, sino la forma en que tú decides vivirla.',
+      'A mitad de cualquier semana, distancia o problema, sigo pensando exactamente lo mismo: qué suerte tengo de amarte.'
+    ],
+    Jueves:[
+      'Hoy quiero recordarte que no necesitas saberlo todo para ser una gran médica; necesitas seguir aprendiendo, y eso lo haces increíblemente bien.',
+      'Tu valentía muchas veces se parece a algo sencillo: entrar a una sala aunque estés nerviosa y hacer lo que sabes hacer.',
+      'Lo que hoy te cuesta, mañana será algo que enseñarás con seguridad a alguien más.',
+      'Admiro tu capacidad de seguir creciendo sin perder tu esencia.',
+      'No permitas que una corrección difícil te haga olvidar las cien cosas que sí hiciste bien.',
+      'Tienes derecho a aprender sin castigarte por estar aprendiendo.',
+      'Tu carrera es importante, pero tú eres más importante que tu carrera. Siempre.',
+      'Me gusta verte perseguir metas grandes porque sé todo lo grande que es también tu corazón.',
+      'Cada día que decides volver a intentarlo estás ganando algo que no se ve en una calificación: experiencia.',
+      'No quiero que seas perfecta; quiero que sigas siendo tú, incluso cuando el mundo te pida demasiado.',
+      'Tu disciplina me impresiona, pero tu ternura me enamora todavía más.',
+      'Si hoy fue un día pesado, ven a este pequeño universo y recuerda: aquí siempre hay alguien orgulloso de ti.'
+    ],
+    Viernes:[
+      'Llegaste al viernes. Eso por sí solo merece un mini aplauso, un abrazo y probablemente algo rico para comer.',
+      'No necesitas terminar la semana con energía para haberla hecho bien.',
+      'Admiro la constancia con la que sigues construyendo una vida que hace unos años solo era un sueño.',
+      'Cada guardia superada, cada paciente y cada aprendizaje son páginas de una versión de ti que todavía me va a sorprender muchísimo.',
+      'Tu cansancio de hoy también es prueba de todo lo que estás intentando conseguir.',
+      'No importa cuántas veces el plan cambie: tú has demostrado que sabes reconstruir rutas.',
+      'Me encanta celebrar tus logros, pero también quiero estar contigo en los días en que no hay nada que celebrar y solo necesitas cariño.',
+      'Ser fuerte no significa hacerlo sola. Yo sigo aquí, siempre de tu lado.',
+      'Que este viernes te encuentre orgullosa de al menos una cosa: de haber llegado hasta aquí.',
+      'Tu capacidad para amar, estudiar, trabajar y seguir soñando me parece una cosa extraordinaria.',
+      'Puede terminar la semana laboral, pero no termina mi admiración por ti.',
+      'Uno de mis lugares favoritos sigue siendo cualquier sitio donde pueda escucharte contarme cómo estuvo tu día.'
+    ],
+    Sábado:[
+      'Hoy no quiero hablarte de productividad. Quiero recordarte que también mereces descansar sin sentir culpa.',
+      'Eres valiosa cuando estudias, cuando trabajas y también cuando no haces absolutamente nada.',
+      'Ojalá hoy tengas aunque sea un ratito que sea solo tuyo, sin pacientes, pendientes ni relojes.',
+      'Descansar no te aleja de tus metas; te permite llegar a ellas siendo todavía tú.',
+      'Me enamora la doctora, sí, pero también la chikita que se ríe, se enoja, hace bromas y necesita apapachos.',
+      'No todo en la vida tiene que convertirse en un logro. Algunas cosas solo tienen que disfrutarse.',
+      'Hoy quiero que recuerdes que ya has hecho suficiente. Tu existencia no necesita justificarse con productividad.',
+      'Tu mejor versión no es la que nunca se cansa; es la que sabe cuidarse también.',
+      'A veces el plan perfecto para avanzar es dormir, comer rico y apagar un rato el modo hospital.',
+      'Si pudiera prescribirte algo hoy: descanso PRN, abrazos cada 8 horas y besitos sin límite máximo.',
+      'Gracias por seguir haciéndome espacio en una vida tan exigente.',
+      'Mi plan favorito para cualquier sábado sigue siendo uno en el que estés tú.'
+    ],
+    Domingo:[
+      'Antes de que empiece otra semana, mira hacia atrás un momento: has hecho mucho más de lo que a veces te reconoces.',
+      'No quiero que empieces mañana pensando en todo lo que falta; quiero que recuerdes todo lo que ya conquistaste.',
+      'Tu historia no se resume en días difíciles. También está hecha de decisiones valientes, metas cumplidas y muchísimo amor.',
+      'Cada semana nueva no es una prueba de tu valor. Tu valor ya está ahí antes de empezar.',
+      'Me emociona imaginar todo lo que todavía vas a lograr, pero también me encanta la mujer que eres exactamente hoy.',
+      'Si mañana te da miedo algo nuevo, recuerda cuántas veces ya hiciste algo por primera vez y saliste adelante.',
+      'No tienes que cargar la próxima semana completa hoy. Solo vive este domingo.',
+      'Admiro tus metas, pero más admiro que sigas teniendo sueños después de todo lo que ya has tenido que luchar.',
+      'Quiero acompañarte en tus éxitos y también en las tardes normales, las llamadas cansadas y los días sin historia.',
+      'Nuestro amor ha sobrevivido a distancias, cambios y despedidas. Una semana difícil no asusta a un equipo como nosotros.',
+      'Pase lo que pase mañana, recuerda que en algún lugar hay un tonto completamente orgulloso de ti.',
+      'Cierra la semana con una certeza: te amo, te admiro y volvería a elegirte en todos los universos posibles.'
+    ]
+  };
+  const dayNames=Object.keys(phrases); let currentDay=dayNames[(new Date().getDay()+6)%7], phraseIndex=0;
+  function renderDays(){const el=document.getElementById('days');el.innerHTML='';dayNames.forEach(d=>{const b=document.createElement('button');b.className='day'+(d===currentDay?' active':'');b.innerHTML=`${d}<span>♥</span>`;b.onclick=()=>{currentDay=d;phraseIndex=0;renderDays();renderPhrase()};el.appendChild(b)})}
+  function renderPhrase(){const arr=phrases[currentDay];document.getElementById('dayTitle').textContent=currentDay;document.getElementById('counter').textContent=`${arr.length} recordatorios para hoy`;document.getElementById('mainPhrase').textContent=arr[phraseIndex%arr.length];const list=document.getElementById('phraseList');list.innerHTML='';arr.forEach((p,i)=>{const d=document.createElement('div');d.className='phrase';d.textContent=p;d.onclick=()=>{phraseIndex=i;document.getElementById('mainPhrase').textContent=p;document.querySelector('.daily-main').scrollIntoView({behavior:'smooth',block:'center'})};list.appendChild(d)})}
+  function nextPhrase(){phraseIndex=(phraseIndex+1)%phrases[currentDay].length;renderPhrase()}
+  function randomAnyDay(){currentDay=dayNames[Math.floor(Math.random()*7)];phraseIndex=Math.floor(Math.random()*phrases[currentDay].length);renderDays();renderPhrase()}
+  renderDays();renderPhrase();
+
+  // Sorpresa
+  function openSurprise(){document.getElementById('modal').classList.add('show');for(let i=0;i<36;i++){setTimeout(()=>{const h=document.createElement('div');h.className='confetti';h.textContent=Math.random()>.3?'♥':'✦';h.style.left=Math.random()*100+'vw';h.style.top='-5vh';h.style.color=['#f08ca3','#e5b969','#b69cff','#ffffff'][Math.floor(Math.random()*4)];h.style.fontSize=(14+Math.random()*18)+'px';document.body.appendChild(h);setTimeout(()=>h.remove(),2800)},i*45)}}
+  function closeSurprise(){document.getElementById('modal').classList.remove('show')}
+  window.addEventListener('keydown',e=>{if(e.key==='Escape')closeSurprise()});
+</script>
+</body>
+</html>
